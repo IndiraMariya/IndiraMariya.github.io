@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 .App {
-  text-align: center;
+  padding-top: 0;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 10px;
+  font-family: 'Roboto Mono', monospace;
+  background-color: #ffffff;
+  color: #1a1d64;
 }
 
 .App-logo {
@@ -14,14 +22,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 50vh;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {

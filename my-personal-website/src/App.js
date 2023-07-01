@@ -1,39 +1,35 @@
-// src/App.js
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
+import Typed from 'typed.js';
 
 function App() {
+  useEffect(() => {
+    const typed = new Typed(".auto-type", {
+      strings: ["a Coder.", "a Designer.", "Indira Mariya."],
+      typeSpeed: 150,
+      backSpeed: 170,
+      loop: true
+    });
+
+    return () => {
+      typed.destroy(); // Cleanup when the component is unmounted
+    };
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Hello, I'm Indira Mariya</h1>
+        <div className="container">
+          <h1>
+            I'm <span className="auto-type"></span>
+          </h1>
+        </div>
       </header>
       <main>
-        <section>
-          <h2>About Me</h2>
-          <p>
-            Hi, I'm John Doe, a passionate web developer. I love building
-            interactive websites using the latest web technologies.
-          </p>
-        </section>
-        <section>
-          <h2>Skills</h2>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Contact</h2>
-          <p>Email: john@example.com</p>
-          <p>Phone: 123-456-7890</p>
-        </section>
+        {/* Rest of your code */}
       </main>
       <footer>
-        <p>&copy; 2023 John Doe</p>
+        <p>&copy; 2023 Indira Mariya</p>
       </footer>
     </div>
   );
