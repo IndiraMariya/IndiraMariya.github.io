@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 .App {
-  padding-top: 0;
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-bottom: 10px;
   font-family: 'Roboto Mono', monospace;
   background-color: #ffffff;
   color: #1a1d64;
@@ -21,7 +17,21 @@
   }
 }
 
+footer{
+  background-color: #1a1d64;
+  min-height: 10vh;
+  padding-bottom: 0;
+  color: white;
+  text-align: center;
+}
+
 .App-header {
+  /* background-color: rgb(238, 238, 241); */
+  background: radial-gradient(ellipse, rgb(190, 190, 255), #ffffff);
+  padding-top: 0;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 10px;
   min-height: 50vh;
   text-align: center;
   display: flex;
@@ -29,6 +39,22 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+}
+
+header h1 {
+  background-image: radial-gradient(radial-gradient, rgb(255, 255, 255), rgb(238, 238, 241));
+  display: inline;
+  
+}
+
+main{
+  padding-top: 0;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 10px;
+  background: rgb(255, 255, 255);
+
+
 }
 
 .App-link {

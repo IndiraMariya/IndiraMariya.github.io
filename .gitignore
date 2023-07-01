@@ -25,3 +25,5 @@ replay_pid*
 
 typing_animation/
 ascii/
+.DS_Store
+particles/
