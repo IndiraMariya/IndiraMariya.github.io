@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+* {
+  cursor: url("cursor.png");
+}
+
+.progress-bar {
+  background: linear-gradient(to bottom, rgb(208, 215, 255) var(--scroll), transparent 0);
+  background-repeat: no-repeat;
+  height: 86%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  z-index: 1;
+}
+
 .App {
   font-family: 'Roboto Mono', monospace;
   background-color: #ffffff;
@@ -39,20 +54,26 @@
   background-color: #3d3f75b5;
 }
 
-#ascii {
-  max-width:10px;
-  max-height: 10px;
-  font-size: 1px;
-}
-
 #projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.project:hover{
+  background-color: #3232a431;
+  border: solid #3d3f75b5;
 }
 
 .project {
   padding: 10px;
+  background-color: #bbbbd431;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 #about p{
@@ -65,6 +86,14 @@
   grid-gap: 50px;
   padding-bottom: 25px;
 }
+
+/* #about_me::before {
+  content: url(defaultFile);
+}
+
+#about_me:hover::before {
+  content: url(hoveredFile);
+} */
 
 #filler{
   background-color: rgba(192, 192, 255, 0.729);
@@ -131,8 +160,19 @@ main{
 }
 
 label{
-  font-size: 20px;
+  font-size: 25px;
 }
+
+#required{
+  color: blue;
+}
+
+input, textarea{
+  border:solid 3px #1a1c6496;
+  border-radius: 5px;
+}
+
+
 
 @keyframes App-logo-spin {
   from {
