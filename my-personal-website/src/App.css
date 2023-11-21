@@ -53,13 +53,21 @@
   height:2px;
   background-color: #3d3f75b5;
 }
-
+#center{
+  text-align: center;
+}
 #projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+#projects p {
+  font-size: 13px;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .project:hover{
@@ -74,17 +82,26 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  border: solid #bbbbd431;
 }
 
 #about p{
-  width:750px;
+  flex: 1;
+  max-width: 70%; /* Adjust the width of the text column */
+  line-height: 1.75;
+}
+
+#about AsciiImage {
+  flex: 1;
+  max-width: 30%; /* Adjust the width of the image column */
+  margin-right: 20px; /* Add some spacing between the columns */
 }
 
 #about{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
-  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
 }
 
 /* #about_me::before {
@@ -94,6 +111,14 @@
 #about_me:hover::before {
   content: url(hoveredFile);
 } */
+
+#about_me{
+  font: 5px;
+}
+
+#skills h2{
+  font-size: 40px;
+}
 
 #filler{
   background-color: rgba(192, 192, 255, 0.729);
@@ -172,7 +197,20 @@ input, textarea{
   border-radius: 5px;
 }
 
-
+button[type="submit"] {
+  color: #1a1d64;
+  background-color: #3232a431;
+  font-size: 20px; /* Change to the desired font size */
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold; /* Change to control the font weight */
+  padding: 10px 20px; /* Adjust padding for better appearance */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border: solid #1a1c6496;
+  border-radius: 8px;
+}
+#contact textarea{
+  vertical-align: bottom;
+}
 
 @keyframes App-logo-spin {
   from {
