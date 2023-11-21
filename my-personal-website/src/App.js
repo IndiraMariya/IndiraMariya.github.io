@@ -82,7 +82,6 @@ function App() {
 
         <h2 id="aboutHead">about me</h2>
         <section id="about">
-
           <AsciiImage file={aboutMe} id="about_me" />
           <p>Hello! I'm a high school coder with a focus on web development. I enjoy building websites and applications, turning ideas into functional code. Outside of coding, I like exploring new technologies and staying updated on industry trends.</p>
         </section>
@@ -90,7 +89,7 @@ function App() {
         <div id="divider"> </div>
 
         <section id="skills">
-          <h2>my skills:</h2>
+          <h2>my skills</h2>
           <p>java, python, swift, bash, react, c++, javascript, css, html</p>
         </section>
 

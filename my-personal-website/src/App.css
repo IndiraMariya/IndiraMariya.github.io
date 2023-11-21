@@ -3,7 +3,7 @@
 .light-mode {
   --background-color: #ffffff;
   --secondary: rgb(208, 215, 255);
-  --text-color: #1a1d64;
+  --text-color: #1a1c64;
   --ascii: darkblue;
   --contrast:blue;
   --divider:#3d3f75b5;
@@ -118,6 +118,10 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
+}
+
+#aboutHead{
+  font-size: 40px;
 }
 
 /* #about_me::before {
