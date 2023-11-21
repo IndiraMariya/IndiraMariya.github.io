@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
 import Typed from 'typed.js';
 import AsciiImage from './ascii_image.js';
@@ -14,8 +15,14 @@ import one from './images/one.jpg';
 import two from './images/two.png';
 import contact from './images/contact.png';
 import ProjectTitle from './ProjectTitle.js';
+import DarkModeToggle from './DarkModeToggle.js';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   useEffect(() => {
     const name = "Indira Mariya."
     const typed = new Typed(".auto-type", {
@@ -31,11 +38,11 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className={`App ${darkMode ? 'dark-mode' : 'light-mode'}`}>
       <header className="App-header">
 
         {/* some kind of logo/home button teop left corner */}
-
+        <DarkModeToggle darkMode={darkMode} onToggle={toggleDarkMode} id="toggle"/>
         <div className="nav">
           <a href="#home">Home</a>
           <span>&#x2022;</span>
@@ -133,7 +140,7 @@ function App() {
         <div id="divider"> </div>
 
         <section id="contact">
-          <h2>Contact Me</h2>
+          <h2>contact me</h2>
           <p>Get in touch with me.</p>
           <div>
             {/* <AsciiImage file={contact} /> */}
@@ -142,11 +149,11 @@ function App() {
               <label htmlFor="name">name:</label>
               <input type="text" id="name" name="name" required />
               <br></br>
-              <span id="required">&nbsp;</span>
+              {/* <span id="required">&nbsp;</span> */}
               <label htmlFor="email">email:</label>
               <input type="email" id="email" name="email" required />
               <br></br>
-              <span id="required">&nbsp;</span>
+              {/* <span id="required">&nbsp;</span> */}
               <label htmlFor="phone">phone:</label>
               <input type="number" id="phone" name="phone" />
               <br></br>
@@ -160,7 +167,6 @@ function App() {
           </div>
         </section>
       </main>
-
 
       <footer>
         <a href="https://www.linkedin.com/in/indira-m/">
@@ -177,7 +183,6 @@ function App() {
         </a>
         <p style={{ paddingBottom:'15px'}}>&copy; 2023 Indira Mariya. All rights reserved. | Crafted with passion and a touch of <span role="img" aria-label="heart">❤️</span></p>
       </footer>
-
     </div>
   );
 }

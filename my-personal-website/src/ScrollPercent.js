@@ -12,7 +12,7 @@ const ScrollPercent = () => {
 
     const handleScroll = () => {
       const scroll = (element[scrollTop] || body[scrollTop]) / ((element[scrollHeight] || body[scrollHeight]) - element.clientHeight) * 100;
-      progressBar.style.setProperty('--scroll', scroll -2 + '%');
+      progressBar.style.setProperty('--scroll', (scroll) + '%');
     };
 
     document.addEventListener('scroll', handleScroll);

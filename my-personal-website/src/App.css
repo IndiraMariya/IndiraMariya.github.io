@@ -1,11 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-* {
-  cursor: url("cursor.png");
+.light-mode {
+  --background-color: #ffffff;
+  --secondary: rgb(208, 215, 255);
+  --text-color: #1a1d64;
+  --ascii: darkblue;
+  --contrast:blue;
+  --divider:#3d3f75b5;
+  --gradient-secondary: rgb(190, 190, 255);
+}
+
+.dark-mode {
+  --background-color: #0a0b29;
+  --secondary: rgb(37, 44, 87);
+  --text-color: #ffffff;
+  --ascii: white;
+  --contrast:rgb(72, 72, 255);
+  --divider:#7879a7b5;
+  --gradient-secondary: rgb(118, 118, 182);
 }
 
 .progress-bar {
-  background: linear-gradient(to bottom, rgb(208, 215, 255) var(--scroll), transparent 0);
+  background: linear-gradient(to bottom, var(--secondary), var(--scroll), transparent 0);
   background-repeat: no-repeat;
   height: 86%;
   position: fixed;
@@ -17,8 +33,8 @@
 
 .App {
   font-family: 'Roboto Mono', monospace;
-  background-color: #ffffff;
-  color: #1a1d64;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .App-logo {
@@ -41,7 +57,7 @@
 
 .nav a{
   text-decoration: none;
-  color: #1a1d64;
+  color: var(--text-color);
 }
 
 .nav a:hover{
@@ -51,7 +67,7 @@
 
 #divider{
   height:2px;
-  background-color: #3d3f75b5;
+  background-color: var(--divider);
 }
 #center{
   text-align: center;
@@ -137,21 +153,11 @@
   line-height: 1.1;
   margin: 0;
   padding: 0;
-  color: darkblue;
-}
-
-
-footer{
-  background-color: #1a1d64;
-  min-height: 10vh;
-  padding-bottom: 0;
-  color: white;
-  text-align: center;
+  color: var(--ascii);
 }
 
 .App-header {
-  /* background-color: rgb(238, 238, 241); */
-  background: radial-gradient(ellipse, rgb(190, 190, 255), #ffffff);
+  background: radial-gradient(ellipse, var(--gradient-secondary), var(--background-color));
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -177,11 +183,11 @@ main{
   padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 10px;
-  background: rgb(255, 255, 255);
+  background: var(--background-color);
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--contrast);
 }
 
 label{
@@ -189,7 +195,7 @@ label{
 }
 
 #required{
-  color: blue;
+  color: var(--contrast);
 }
 
 input, textarea{
@@ -198,8 +204,8 @@ input, textarea{
 }
 
 button[type="submit"] {
-  color: #1a1d64;
-  background-color: #3232a431;
+  color: var(--text-color);
+  background-color: var(--secondary);
   font-size: 20px; /* Change to the desired font size */
   font-family: 'Roboto Mono', monospace;
   font-weight: bold; /* Change to control the font weight */
@@ -219,4 +225,19 @@ button[type="submit"] {
   to {
     transform: rotate(360deg);
   }
+}
+
+#contact h2{
+  font-size: 40px;
+}
+
+footer{
+  background-color: var(--text-color);
+  min-height: 10vh;
+  padding-bottom: 0;
+  color: var(--background-color);
+  text-align: center;
+  position: relative;
+  bottom: -16px;
+  padding-top: 0px;
 }
