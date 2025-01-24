@@ -48,7 +48,10 @@ const ProjectTitle = () => {
         onMouseLeave={handleLeave}
       >
         recent <br /> projects
-        <span style={sameStyle}>see more</span>
+        <span style={sameStyle}>
+        <a href="https://github.com/IndiraMariya"> see more
+        </a>
+        </span>
         <span style={arrowStyle}>&#10230;</span>
       </span>
     </h1>

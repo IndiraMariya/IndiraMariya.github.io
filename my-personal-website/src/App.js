@@ -9,10 +9,6 @@ import githubImage from './images/github.png';
 import emailImage from './images/email.png';
 import arenaImage from './images/arena.png';
 import aboutMe from './images/profile.jpeg';
-import notMe from './images/me2.jpeg';
-import me from './images/me.png';
-import one from './images/one.jpg';
-import two from './images/two.png';
 import contact from './images/contact.png';
 import ProjectTitle from './ProjectTitle.js';
 import DarkModeToggle from './DarkModeToggle.js';
@@ -27,8 +23,8 @@ function App() {
     const name = "Indira Mariya."
     const typed = new Typed(".auto-type", {
       strings: ["a Coder.", "a Designer.", name.italics()],
-      typeSpeed: 150,
-      backSpeed: 170,
+      typeSpeed: 100,
+      backSpeed: 120,
       loop: true
     });
 
@@ -44,10 +40,6 @@ function App() {
         {/* some kind of logo/home button teop left corner */}
         <DarkModeToggle darkMode={darkMode} onToggle={toggleDarkMode} id="toggle"/>
         <div className="nav">
-          <a href="#home">Home</a>
-          <span>&#x2022;</span>
-          <br></br>
-          <br></br>
           <a href="#about">About</a>
           <span>&#x2022;</span>
           <br></br>
@@ -72,26 +64,67 @@ function App() {
       </header>
 
       <main>
-
-        <section id="home">
-          <h4 id="center">Dive into my portfolio — a digital realm where ideas take shape through the magic of coding.</h4>
-          {/* <p>Introduce yourself and highlight your skills and expertise here.</p> */}
-        </section>
-
-        <div id="divider"> </div>
-
         <h2 id="aboutHead">about me</h2>
         <section id="about">
           <AsciiImage file={aboutMe} id="about_me" />
-          <p>Hello! I'm a high school coder with a focus on web development. I enjoy building websites and applications, turning ideas into functional code. Outside of coding, I like exploring new technologies and staying updated on industry trends.</p>
-        </section>
+          <p>I am a current freshman Computer Science student at the University of California, Santa Cruz. My areas of interest include Machine Learning, Astrophysics, and Graphics.</p>
+
+          </section>
 
         <div id="divider"> </div>
 
+
         <section id="skills">
-          <h2>my skills</h2>
-          <p>java, python, swift, bash, react, c++, javascript, css, html</p>
+          <h2>My Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-box">
+              {/* <div class="icon">🎯</div> */}
+              {/* <AsciiImage file={java} id="icon"></AsciiImage> */}
+              <p>Java</p>
+            </div>
+            <div class="skill-box">
+              {/* <div class="icon">🐍
+              </div> */}
+              <p>Python</p>
+            </div>
+            <div class="skill-box">
+              {/* <div class="icon">🔧</div> */}
+              <p>C</p>
+            </div>
+            <div class="skill-box">
+              {/* <div class="icon">💻</div> */}
+              <p>Bash</p>
+            </div>
+            <div class="skill-box">
+              {/* <div class="icon">📊</div> */}
+              <p>Pandas</p>
+            </div>
+            <div class="skill-box">
+              {/* <div class="icon">🔢</div> */}
+              <p>Matlab</p>
+            </div>
+            <div class="skill-box">
+              {/* <div class="icon">🖥️</div> */}
+              <p>JavaScript</p>
+            </div>
+            <div class="skill-box">
+              {/* <div class="icon">🌐</div> */}
+              <p>HTML</p>
+            </div>
+            <div class="skill-box">
+              {/* <div class="icon">🎨</div> */}
+              <p>CSS</p>
+            </div>
+            <div class="skill-box">
+              {/* <div class="icon">🧠</div> */}
+              <p>Machine Learning</p>
+            </div>
+          </div>
         </section>
+
+
+
+
 
         <div id="divider"> </div>
 
@@ -99,38 +132,36 @@ function App() {
           {/* <h1 style={{ fontSize: '40px' }}>Recent <br></br> Projects</h1> */}
           <ProjectTitle></ProjectTitle>
 
+          {/* <a href="/double.js" target="_blank" rel="noopener noreferrer"> */}
           <div className="project">
             <h2>The Double Scoop</h2>
-            {/* <div id="filler"></div> */}
-            {/* <AsciiImage file={two} /> */}
+            
             <p>An app made with machine learning to detects media bias, present a diverse range of American news articles to users.</p>
           </div>
-
-          <div className="project">
-            <h2>Magic Mirror</h2>
-            {/* <AsciiImage file={one} /> */}
-            <p>A customized fork of the Magic Mirror project, this enhanced version offers a captivating smart mirror experience with personalized widgets.</p>
-          </div>
-
-          <div className="project">
-            <h2>Shopping-Cart Detection</h2>
-            {/* <div id="filler"></div> */}
-            {/* <AsciiImage file={two} /> */}
-            <p>Detect ghosted shopping carts, leveraging Jetson Nano and real-time image detection for proactive e-commerce optimization.</p>
-          </div>
+          
 
           <div className="project">
             <h2>Solar Flare Prediction</h2>
-            {/* <div id="filler"></div> */}
-            {/* <AsciiImage file={two} /> */}
-            <p>Detect ghosted shopping carts, leveraging Jetson Nano and real-time image detection for proactive e-commerce optimization.</p>
+            <p>Predict solar flares to provide early warnings, helping to protect Earth’s electrical infrastructure.
+            </p>
           </div>
 
           <div className="project">
+            <h2>Shaders</h2>
+            <p>Exploring various graphics techniques such as dithering, ASCII art, fractals, and more using Python.
+            </p>
+
+            </div>
+
+          <div className="project">
             <h2>LOX</h2>
-            {/* <div id="filler"></div> */}
-            {/* <AsciiImage file={two} /> */}
-            <p>Detect ghosted shopping carts, leveraging Jetson Nano and real-time image detection for proactive e-commerce optimization.</p>
+            <p>Conceptualized, designed, prototyped, and tested a productto help students stay focused during remote learning from the COVID-19 pandemic. 
+            </p>
+          </div>
+
+          <div className="project">
+            <h2>Coming Soon</h2>
+            <p> A work in progress...</p>          
           </div>
 
         </section>
@@ -140,31 +171,10 @@ function App() {
 
         <section id="contact">
           <h2>contact me</h2>
-          <p>Get in touch with me.</p>
-          <div>
-            {/* <AsciiImage file={contact} /> */}
-            <form action="/submit-form" method="POST">
-              <span id="required"> *</span>
-              <label htmlFor="name">name:</label>
-              <input type="text" id="name" name="name" required />
-              <br></br>
-              {/* <span id="required">&nbsp;</span> */}
-              <label htmlFor="email">email:</label>
-              <input type="email" id="email" name="email" required />
-              <br></br>
-              {/* <span id="required">&nbsp;</span> */}
-              <label htmlFor="phone">phone:</label>
-              <input type="number" id="phone" name="phone" />
-              <br></br>
-              <span id="required"> *</span>
-              <label htmlFor="message">message:</label>
-              <textarea id="message" name="message" rows="1" required></textarea>
-              <br></br>
-              <br></br>
-              <button type="submit">Submit</button>
-            </form>
-          </div>
+          <p>Get in touch with me. @indira.mariya@gmail.com</p>
         </section>
+
+        {/* <AsciiImage file={java}></AsciiImage> */}
       </main>
 
       <footer>
@@ -180,7 +190,7 @@ function App() {
         <a href="https://www.are.na/indira-m">
           <img src={arenaImage} alt="Arena" style={{ width: '40px', paddingTop: '10px', paddingLeft: '5px', paddingRight: '5px' }} />
         </a>
-        <p style={{ paddingBottom:'15px'}}>&copy; 2023 Indira Mariya. All rights reserved. | Crafted with passion and a touch of <span role="img" aria-label="heart">❤️</span></p>
+        <p style={{ paddingBottom:'15px'}}>&copy; 2023 Indira Mariya. All rights reserved. | Crafted with passion.</p>
       </footer>
     </div>
   );
