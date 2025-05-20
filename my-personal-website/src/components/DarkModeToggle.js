@@ -1,8 +1,6 @@
 // DarkModeToggle.js
 import React from 'react';
 import styled from 'styled-components';
-import moonImage from './images/moon.png'; // Update the path based on your file structure
-import AsciiImage from './ascii_image';
 
 const StyledButton = styled.button`
   background-color: ${props => (props.darkMode ? '#ffffff00' : '#ffffff00')};
@@ -28,9 +26,6 @@ const AsciiImageWrapper = styled.div`
 const DarkModeToggle = ({ darkMode, onToggle }) => {
   return (
     <StyledButton darkMode={darkMode} onClick={onToggle}>
-      <AsciiImageWrapper>
-        {/* <AsciiImage file={moonImage} id="icon"></AsciiImage> */}
-      </AsciiImageWrapper>
       +
     </StyledButton>
   );
