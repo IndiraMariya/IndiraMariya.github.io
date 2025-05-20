@@ -29,15 +29,13 @@ const skillSections = [
       { icon: <FaGitAlt title="Git" />, label: 'Git' },
       { icon: <SiJupyter title="Jupyter Notebooks" />, label: 'Jupyter Notebooks' },
       { icon: <FaDatabase title="Supabase" />, label: 'Supabase' },
-      { icon: <MdComputer title="Eclipse" />, label: 'Eclipse' },
       { icon: <MdComputer title="Jetson Nano" />, label: 'Jetson Nano' },
       { icon: <MdComputer title="Solidworks" />, label: 'Solidworks' },
     ],
   },
   {
-    title: 'AI / Machine Learning:',
+    title: 'AI / ML:',
     skills: [
-      { icon: <FaBrain title="Machine Learning" />, label: 'Machine Learning' },
       { icon: <FaBrain title="NLP" />, label: 'NLP' },
       { icon: <SiTensorflow title="TensorFlow" />, label: 'TensorFlow' },
       { icon: <FaPython title="NumPy" />, label: 'NumPy' },
@@ -49,13 +47,13 @@ const skillSections = [
 
 function Skills() {
   return (
-    <section id="skills" style={{ padding: 20 }}>
+    <section id="skills">
       <h2 style={{ marginBottom: 24}}>technical skills</h2>
-      <div
+      <div id="skills_content"
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(2, 1fr)',
-          gap: 40,
+          gridTemplateColumns: 'repeat(4, 1fr)',
+          gap: 30,
         }}
       >
         {skillSections.map(({ title, skills }) => (
