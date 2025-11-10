@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "rm -rf docs build && npm run build && mkdir -p docs && cp -R build/* docs && cp docs/index.html docs/404.html",
+    "predeploy": "rm -rf ../docs build && npm run build && mkdir -p ../docs && cp -R build/* ../docs && cp ../docs/index.html ../docs/404.html",
     "deploy": "git add -A && git commit -m \"deploy\" || true && git push origin main",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
