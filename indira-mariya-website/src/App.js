@@ -5,15 +5,15 @@ import star from './images/star.png';
 import book from './images/book.png';
 import contact from './images/contact.png';
 
-import DarkModeToggle from './components/DarkModeToggle.js';
-import Header from './components/Header';
+// import DarkModeToggle from './components/DarkModeToggle.js';
+import Header from './components/Header.js';
 import Divider from './components/Divider.js';
-import About from './components/About';
-import Skills from './components/Skills';
+import About from './components/About.js';
+import Skills from './components/Skills.js';
 import Education from './components/Education.js';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Projects from './components/Projects.js';
+import Contact from './components/Contact.js';
+import Footer from './components/Footer.js';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -29,26 +29,24 @@ function App() {
 
         <About />
         <Divider />
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '66px'}}>
+          {/* <AsciiImage file={book} id="book_img" /> */}
+          <Education />
+        </div>
+        <Divider />
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', width: '100%' }}>
           <div style={{ flex: 1 }}>
             <Skills />
           </div>
           <div style={{ flexShrink: 0 }}>
-            <AsciiImage file={star} id="star_img" style={{ width: '80px', height: '80px' }} />
+            {/* <AsciiImage file={star} id="star_img" style={{ width: '80px', height: '80px' }} /> */}
           </div>
         </div>
-
-        <Divider />
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '66px' }}>
-          <AsciiImage file={book} id="book_img" />
-          <Education />
-        </div>
-
         <Divider />
         <Projects />
         <Divider />
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '66px' }}>
-          <AsciiImage file={contact} id="contact_img" />
+          {/* <AsciiImage file={contact} id="contact_img" /> */}
           <Contact />
         </div>
       </main>

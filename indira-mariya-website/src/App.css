@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* ===================================
+   THEME VARIABLES
+   =================================== */
+
+.light-mode {
+  --background-color: #ffffff;
+  --secondary: rgb(208, 215, 255);
+  --text-color: #1a1c64;
+  --ascii: darkblue;
+  --contrast: blue;
+  --divider: #3d3f7546;
+  --gradient-secondary: rgb(190, 190, 255);
+  --header-highlight: #3232a431;
+}
+
+.dark-mode {
+  --background-color: #0a0b29;
+  --secondary: rgb(37, 44, 87);
+  --text-color: #ffffff;
+  --ascii: white;
+  --contrast: rgb(168, 168, 255);
+  --divider: #7879a7b5;
+  --gradient-secondary: rgb(118, 118, 182);
+  --header-highlight: #bbbbd431;
+}
+
+/* ===================================
+   GLOBAL STYLES
+   =================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: 'Roboto Mono', monospace;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--contrast);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===================================
+   LAYOUT
+   =================================== */
+
+.container {
+  padding: 0 clamp(20px, 5vw, 60px) 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(14px, 2vmin, 20px);
+}
+
+main {
+  padding: 0 clamp(20px, 5vw, 60px) 10px;
+  background: var(--background-color);
+  width: 100%;
+}
+
+/* ===================================
+   HEADER & NAVIGATION
+   =================================== */
+
+.App-header {
+  background: radial-gradient(ellipse 80% 40% at 50% 50%, var(--gradient-secondary), var(--background-color));
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: visible;
+  padding: clamp(20px, 4vh, 40px) clamp(20px, 5vw, 60px);
+}
+
+header h1 {
+  display: inline;
+}
+
+.nav {
+  padding: 0;
+  padding-bottom: clamp(30px, 5vh, 50px);
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(24px, 4vw, 48px);
+  width: 100%;
+  order: -1;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 0.2s ease;
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+
+.nav a::after {
+  content: 'â€¢';
+  margin-left: 4px;
+  display: inline;
+}
+
+.name {
+  text-align: center;
+  font-size: clamp(24px, 4vw, 36px);
+  margin: 0;
+}
+
+.nav a:hover {
+  font-weight: bold;
+  transform: translateY(-2px);
+}
+
+/* ===================================
+   DIVIDER
+   =================================== */
+
+.divider {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  margin: clamp(24px, 4vh, 32px) 0;
+}
+
+.divider .dash-line {
+  letter-spacing: 4px;
+  color: var(--divider);
+  font-family: monospace;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: bold;
+}
+
+#divider {
+  height: 2px;
+  background-color: var(--divider);
+  border: none;
+  margin: clamp(24px, 4vh, 32px) 0;
+}
+
+/* ===================================
+   ASCII IMAGE
+   =================================== */
+
+#star_img {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%) rotate(-15deg);
+  width: clamp(30px, 4vw, 40px);
+  height: clamp(30px, 4vw, 40px);
+  z-index: 10;
+}
+
+.ascii-image-canvas {
+  display: none;
+}
+
+.ascii-image {
+  font-family: monospace;
+  font-size: clamp(8px, 1vw, 10px);
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+  color: var(--ascii);
+  white-space: pre;
+  overflow: hidden;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+
+footer {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  text-align: center;
+  padding: clamp(12px, 2vh, 20px) clamp(20px, 5vw, 60px);
+  margin-top: clamp(40px, 6vh, 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(12px, 1.5vw, 16px);
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+#center {
+  text-align: center;
+}
+
+.App-link {
+  color: var(--contrast);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 768px) {
+  .App-header {
+    min-height: 40vh;
+  }
+
+  .nav {
+    gap: clamp(16px, 3vw, 24px);
+    padding-bottom: clamp(20px, 3vh, 30px);
+  }
+
+  main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    min-height: 35vh;
+  }
+
+  .name {
+    font-size: clamp(20px, 7vw, 32px);
+  }
+
+  .nav {
+    gap: clamp(12px, 3vw, 18px);
+    flex-wrap: wrap;
+  }
+}
+
+/* ===================================
+   ANIMATIONS
+   =================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

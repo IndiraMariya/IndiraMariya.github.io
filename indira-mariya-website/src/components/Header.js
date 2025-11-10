@@ -6,8 +6,8 @@ import Name from './Name';
 function Header({ darkMode, toggleDarkMode }) {
   return (
     <header className="App-header">
-      <DarkModeToggle darkMode={darkMode} onToggle={toggleDarkMode} id="toggle" />
-      <Nav />
+      {/* <DarkModeToggle darkMode={darkMode} onToggle={toggleDarkMode} id="toggle" /> */}
+      {/* <Nav /> */}
       <Name />
     </header>
   );
