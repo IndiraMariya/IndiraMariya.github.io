@@ -15,8 +15,8 @@ function About() {
         
         <div className="about-text">
           <p>
-            I am currently a sophomore Computer Science student at the University of California, Santa Cruz. 
-            My areas of interest include Applied Math, Cybersecurity, and Computational Graphics.
+            I am currently a sophomore Computer Science and Applied Math student at the University of California, Santa Cruz. 
+            My areas of interest include GPU Programming, and High Performance Computing, and Computational Graphics.
           </p>
         </div>
       </div>

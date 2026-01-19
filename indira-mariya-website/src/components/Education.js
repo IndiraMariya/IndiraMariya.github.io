@@ -6,32 +6,29 @@ function Education() {
     {
       school: 'University of California, Santa Cruz',
       degree: 'Bachelor of Science (B.S.) in Computer Science and Applied Math',
-      period: 'Sept 2024 - Jun 2027',
-      gpa: '3.95 GPA | Dean’s Honors List',
+      period: 'Sept 2024 - Jun 2028',
+      gpa: '3.95 GPA',
       coursesLabel: 'Relevant Courses',
       courses: [
-        'Math Methods I',
-        'Math Methods II',
         'Intro to Hacking',
         'Computer Systems and Assembly Language',
         'C Programming',
         'Data Structures and Algorithms',
-        'Discrete Mathematics for Computer Science',
+        'Computer Architechture',
       ]
     },
     {
       school: 'Foothill Community College, Los Altos',
-      degree: 'COA Software Development in Java',
+      degree: 'Certificate of Achievement in Software Development in Java',
       period: 'Jun 2021 - Aug 2024',
-      coursesLabel: 'Courses Taken',
+      coursesLabel: 'Relevant Courses',
       courses: [
         'Intermediate Java',
         'Elementary Statistics',
-        'Graphic Design Studio',
         'Intro to Linux',
         'JavaScript for Programmers',
         'Discrete Mathematics',
-        'Bash Programming'
+        'Bash Scripting'
       ]
     }
   ];

@@ -66,10 +66,6 @@ function Contact() {
           </li>
         ))}
       </ul>
-
-      <div className="contact-cta">
-        <p>Feel free to reach out — I'd love to hear from you!</p>
-      </div>
     </section>
   );
 }

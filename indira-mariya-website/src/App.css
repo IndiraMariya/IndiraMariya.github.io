@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+/* Scale everything down by 90% */
+body {
+  transform: scale(0.9);
+  transform-origin: top center;
+  margin-bottom: -400px;
+  margin-left: -100px;
+  margin-right: -100px;
+  padding: 0;
+}
+
 /* ===================================
    THEME VARIABLES
    =================================== */
@@ -111,7 +121,7 @@ header h1 {
 }
 
 .nav a::after {
-  content: 'â€¢';
+  content: '•';
   margin-left: 4px;
   display: inline;
 }
@@ -191,12 +201,12 @@ footer {
   background-color: var(--text-color);
   color: var(--background-color);
   text-align: center;
-  padding: clamp(12px, 2vh, 20px) clamp(20px, 5vw, 60px);
-  margin-top: clamp(40px, 6vh, 60px);
+  padding: clamp(3px, 0.4vh, 5px) clamp(20px, 5vw, 60px);
+  margin-top: clamp(30px, 4vh, 40px);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(12px, 1.5vw, 16px);
+  font-size: clamp(11px, 1.3vw, 14px);
 }
 
 /* ===================================
