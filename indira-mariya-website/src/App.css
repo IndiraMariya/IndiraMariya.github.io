@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-/* Scale everything down by 90% */
+html {
+  font-size: 81%;
+}
+
 body {
-  transform: scale(0.9);
-  transform-origin: top center;
-  margin-bottom: -400px;
-  margin-left: -100px;
-  margin-right: -100px;
+  margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* ===================================
@@ -72,12 +72,18 @@ a:hover {
   align-items: center;
   justify-content: center;
   font-size: clamp(14px, 2vmin, 20px);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 main {
   padding: 0 clamp(20px, 5vw, 60px) 10px;
   background: var(--background-color);
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* ===================================
@@ -194,6 +200,36 @@ header h1 {
 }
 
 /* ===================================
+   SECTION ROW LAYOUTS
+   =================================== */
+
+.section-row {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(24px, 4vw, 66px);
+  width: 100%;
+}
+
+.section-row-fill {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(12px, 2vw, 16px);
+  width: 100%;
+}
+
+.section-row-fill > .flex-fill {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .section-row,
+  .section-row-fill {
+    flex-direction: column;
+  }
+}
+
+/* ===================================
    FOOTER
    =================================== */
 
@@ -236,14 +272,20 @@ footer {
   }
 
   main {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: clamp(16px, 4vw, 20px);
+    padding-right: clamp(16px, 4vw, 20px);
   }
 }
 
 @media (max-width: 480px) {
+  html {
+    font-size: 85%;
+  }
+
   .App-header {
     min-height: 35vh;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .name {
@@ -253,6 +295,11 @@ footer {
   .nav {
     gap: clamp(12px, 3vw, 18px);
     flex-wrap: wrap;
+  }
+
+  main {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 

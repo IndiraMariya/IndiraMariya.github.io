@@ -10,11 +10,15 @@ function Education() {
       gpa: '3.95 GPA',
       coursesLabel: 'Relevant Courses',
       courses: [
-        'Intro to Hacking',
-        'Computer Systems and Assembly Language',
+        'GPU Programming',
+        'Computational Methods',
+        'Computer Architecture',
+        'Computer Systems Design',
         'C Programming',
-        'Data Structures and Algorithms',
-        'Computer Architechture',
+        'Advanced Math Methods',
+        'Analysis of Algorithms',
+        'Data Structures',
+        'Functional Programming',
       ]
     },
     {
@@ -23,12 +27,11 @@ function Education() {
       period: 'Jun 2021 - Aug 2024',
       coursesLabel: 'Relevant Courses',
       courses: [
-        'Intermediate Java',
-        'Elementary Statistics',
-        'Intro to Linux',
-        'JavaScript for Programmers',
+        'Introduction to Cloud Computing in AWS',
+        'Linux & Bash Scripting',
+        'Linear Algebra',
         'Discrete Mathematics',
-        'Bash Scripting'
+        'Intermediate Software Design in Java',
       ]
     }
   ];

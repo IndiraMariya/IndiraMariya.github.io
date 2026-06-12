@@ -10,13 +10,13 @@ function Contact() {
       icon: '1',
       ariaLabel: 'Send email to Indira'
     },
-    {
-      label: 'Phone',
-      value: '+1 (650) 448-8454',
-      href: 'tel:+16504488454',
-      icon: '2',
-      ariaLabel: 'Call Indira'
-    },
+    // {
+    //   label: 'Phone',
+    //   value: '+1 (650) 448-8454',
+    //   href: 'tel:+16504488454',
+    //   icon: '2',
+    //   ariaLabel: 'Call Indira'
+    // },
     {
       label: 'LinkedIn',
       value: 'linkedin.com/in/indira-m/',
@@ -44,7 +44,7 @@ function Contact() {
     <section id="contact" className="contact-section">
       <h2 className="contact-title">contact me</h2>
       
-      <ul className="contact-list" role="list">
+      <ul className="contact-list">
         {contactInfo.map((contact, index) => (
           <li key={index} className="contact-item">
             <span className="contact-icon" aria-hidden="true">

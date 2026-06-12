@@ -43,11 +43,10 @@
 
 // export default Projects;
 
-import React, { useState } from 'react';
+import React from 'react';
 import './Projects.css';
 
 function Projects() {
-  const [hoveredId, setHoveredId] = useState(null);
   
   const projects = [
     {
@@ -90,31 +89,27 @@ function Projects() {
             key={project.id} 
             className="project-card"
             onClick={() => handleCardClick(project.githubUrl)}
-            onMouseEnter={() => setHoveredId(project.id)}
-            onMouseLeave={() => setHoveredId(null)}
             style={{ cursor: 'pointer' }}
           >
             <h3 className="project-title">{project.title}</h3>
             <p className="project-description">{project.description}</p>
             
-            {hoveredId === project.id && (
-              <div className="learn-more">
-                <span>Learn more</span>
-                <svg 
-                  width="20" 
-                  height="20" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                >
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </div>
-            )}
+            <div className="learn-more">
+              <span>Learn more</span>
+              <svg 
+                width="20" 
+                height="20" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
           </article>
         ))}
       </div>

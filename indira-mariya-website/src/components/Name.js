@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Name() {
+function Name({ nameRef }) {
   return (
-    <div className="name">
-      <h1>Indira Mariya</h1>
+    <div className="name" style={{ position: 'relative', zIndex: 2 }}>
+      <h1 ref={nameRef}>Indira Mariya</h1>
     </div>
   );
 }

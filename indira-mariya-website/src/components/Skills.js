@@ -1,92 +1,86 @@
 import React from 'react';
-import AsciiImage from './ascii_image.js';
-import star from '../images/star.png';
-import { FaPython, FaJava, FaJsSquare, FaGitAlt, FaDatabase, FaBrain, FaTerminal, FaCalculator, FaAws } from 'react-icons/fa';
-import { SiAwslambda, SiCplusplus, SiHuggingface, SiMysql, SiSqlite} from 'react-icons/si';
-
-import { SiRiscv, SiC, SiHtml5, SiCss3, SiSvelte, SiTailwindcss, SiTensorflow, SiJupyter, SiReact, SiArduino } from 'react-icons/si';
-import { MdComputer } from 'react-icons/md';
+import { FaPython, FaJava, FaGitAlt, FaBrain, FaTerminal, FaCalculator, FaAws, FaDocker } from 'react-icons/fa';
+import { SiHuggingface, SiMysql, SiSqlite, SiC, SiArduino, SiCmake, SiJupyter, SiPytorch, SiTensorflow, SiNumpy, SiPandas, SiScikitlearn, SiNvidia, SiLinux, SiRaspberrypi } from 'react-icons/si';
+import { MdComputer, MdMemory, MdSpeed } from 'react-icons/md';
 import './Skills.css';
 
 function Skills() {
   const skillSections = [
     {
-      id: 'programming',
+      id: 'languages',
       title: 'Languages',
       skills: [
-        { icon: FaPython, label: 'Python', ariaLabel: 'Python programming language' },
-        { icon: SiC, label: 'C/C++', ariaLabel: 'C programming language' },
-        { icon: FaJava, label: 'Java', ariaLabel: 'Java programming language' },
-        { icon: SiRiscv, label: 'RISC-V Assembly', ariaLabel: 'RISC-V Assembly language' },
-        { icon: FaTerminal, label: 'Bash', ariaLabel: 'Bash scripting' },
-        { icon: SiMysql, label: 'SQL', ariaLabel: 'SQL' },
-        { icon: FaCalculator, label: 'MATLAB', ariaLabel: 'MATLAB' },
+        { icon: SiC, label: 'C / C++' },
+        { icon: FaPython, label: 'Python' },
+        { icon: FaJava, label: 'Java' },
+        { icon: FaCalculator, label: 'MATLAB' },
+        { icon: FaTerminal, label: 'Bash' },
       ],
     },
-    // {
-    //   id: 'web-dev',
-    //   title: 'Web Dev',
-    //   skills: [
-    //     { icon: FaJsSquare, label: 'JavaScript', ariaLabel: 'JavaScript programming language' },
-    //     { icon: SiHtml5, label: 'HTML', ariaLabel: 'HTML markup language' },
-    //     { icon: SiCss3, label: 'CSS', ariaLabel: 'CSS styling' },
-    //     { icon: SiSvelte, label: 'Svelte', ariaLabel: 'Svelte framework' },
-    //     { icon: SiTailwindcss, label: 'Tailwind', ariaLabel: 'Tailwind CSS framework' },
-    //     { icon: SiReact, label: 'React', ariaLabel: 'React JS framework' },
-    //   ],
-    // },
     {
-      id: 'tools',
-      title: 'Tools',
+      id: 'hpc',
+      title: 'HPC & Parallel',
       skills: [
-        { icon: FaGitAlt, label: 'Git', ariaLabel: 'Git version control' },
-        { icon: FaAws, label: 'AWS', ariaLabel: 'AWS' },
-        { icon: SiSqlite, label: 'SQLite', ariaLabel: 'SQLite' },
-        { icon: MdComputer, label: 'Jetson Nano', ariaLabel: 'NVIDIA Jetson Nano' },
-        { icon: SiArduino, label: 'Arduino', ariaLabel: 'Arduino Board' },
-        { icon: MdComputer, label: 'Solidworks', ariaLabel: 'Solidworks CAD software' },
+        { icon: SiNvidia, label: 'CUDA' },
+        { icon: MdMemory, label: 'OpenMP' },
+        { icon: MdSpeed, label: 'MPI' },
+        { icon: MdSpeed, label: 'SIMD' },
+        { icon: FaTerminal, label: 'Slurm / PBS' },
+        { icon: SiLinux, label: 'Linux' },
       ],
     },
     {
       id: 'ai-ml',
       title: 'AI / ML',
       skills: [
-        { icon: SiHuggingface, label: 'Hugging Face', ariaLabel: 'Natural Language Processing' },
-        { icon: SiTensorflow, label: 'TensorFlow', ariaLabel: 'TensorFlow machine learning framework' },
-        { icon: FaPython, label: 'NumPy', ariaLabel: 'NumPy library' },
-        { icon: FaPython, label: 'Sci-Kit Learn', ariaLabel: 'Scikit-learn machine learning library' },
-        { icon: FaPython, label: 'Pandas', ariaLabel: 'Pandas data analysis library' },
-
+        { icon: SiPytorch, label: 'PyTorch' },
+        { icon: SiTensorflow, label: 'TensorFlow' },
+        { icon: FaBrain, label: 'Triton' },
+        { icon: SiHuggingface, label: 'Hugging Face' },
+        { icon: SiNumpy, label: 'NumPy' },
+        { icon: SiPandas, label: 'Pandas' },
+        { icon: SiScikitlearn, label: 'Scikit-learn' },
+      ],
+    },
+    {
+      id: 'tools',
+      title: 'Tools & Hardware',
+      skills: [
+        { icon: FaGitAlt, label: 'Git' },
+        { icon: SiCmake, label: 'CMake' },
+        { icon: FaDocker, label: 'Docker' },
+        { icon: FaAws, label: 'AWS' },
+        { icon: FaTerminal, label: 'GDB' },
+        { icon: FaTerminal, label: 'Valgrind' },
+        { icon: SiJupyter, label: 'Jupyter' },
+        { icon: SiSqlite, label: 'SQLite' },
+        { icon: SiMysql, label: 'MySQL' },
+        { icon: SiArduino, label: 'Arduino' },
+        { icon: MdComputer, label: 'Jetson Nano' },
+        { icon: SiRaspberrypi, label: 'Raspberry Pi' },
+        { icon: MdComputer, label: 'Solidworks' },
       ],
     },
   ];
 
   return (
     <section id="skills" className="skills-section">
-      <h2 className="skills-title">
-        technical skills
-        {/* <AsciiImage file={star} id="star_img" /> */}
-      </h2>
+      <h2 className="skills-title">technical skills</h2>
       <div className="skills-grid">
         {skillSections.map((section) => (
           <article key={section.id} className="skill-category">
             <h3 className="category-title">{section.title}</h3>
-            
-            <ul className="skills-list" role="list">
+            <div className="skills-pills">
               {section.skills.map((skill) => {
                 const IconComponent = skill.icon;
                 return (
-                  <li key={skill.label} className="skill-item">
-                    <span className="skill-icon" aria-hidden="true">
-                      <IconComponent />
-                    </span>
-                    <span className="skill-label" aria-label={skill.ariaLabel}>
-                      {skill.label}
-                    </span>
-                  </li>
+                  <span key={skill.label} className="skill-pill">
+                    <IconComponent className="pill-icon" aria-hidden="true" />
+                    {skill.label}
+                  </span>
                 );
               })}
-            </ul>
+            </div>
           </article>
         ))}
       </div>

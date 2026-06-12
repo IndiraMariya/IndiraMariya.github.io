@@ -29,13 +29,13 @@ function App() {
 
         <About />
         <Divider />
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '66px'}}>
+        <div className="section-row">
           {/* <AsciiImage file={book} id="book_img" /> */}
           <Education />
         </div>
         <Divider />
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', width: '100%' }}>
-          <div style={{ flex: 1 }}>
+        <div className="section-row-fill">
+          <div className="flex-fill">
             <Skills />
           </div>
           <div style={{ flexShrink: 0 }}>
@@ -45,7 +45,7 @@ function App() {
         <Divider />
         <Projects />
         <Divider />
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '66px' }}>
+        <div className="section-row">
           {/* <AsciiImage file={contact} id="contact_img" /> */}
           <Contact />
         </div>
