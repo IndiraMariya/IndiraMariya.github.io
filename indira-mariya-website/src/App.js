@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import './components/sections.css';
 
+import DarkModeToggle from './components/DarkModeToggle.js';
 import Header from './components/Header.js';
 import About from './components/About.js';
 import Education from './components/Education.js';
@@ -17,13 +18,14 @@ function App() {
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : 'light-mode'}`}>
+      <DarkModeToggle darkMode={darkMode} onToggle={toggleDarkMode} />
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
       <main>
         <section id="home"></section>
-        {/* <About /> */}
+        <About />
         <Education />
-        <Experience/>
+        <Experience />
         <Skills />
         <Projects />
         <Contact />
