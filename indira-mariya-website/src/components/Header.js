@@ -18,8 +18,9 @@ function Header({ darkMode, toggleDarkMode }) {
         <Name />
 
         <p className="hero-tagline">
-          CS &amp; Applied Math @ UC Santa Cruz — building at the intersection of GPU
-          programming, high-performance computing, and computational graphics.
+            Computer Science &amp; Applied Mathematics student at UC Santa Cruz.
+            I work on GPU programming, high-performance computing, and
+            computational graphics.
         </p>
 
         <div className="hero-cta">

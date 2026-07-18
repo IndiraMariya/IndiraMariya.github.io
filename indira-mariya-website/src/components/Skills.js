@@ -1,7 +1,7 @@
 import React from 'react';
-import { FaPython, FaJava, FaGitAlt, FaBrain, FaTerminal, FaCalculator, FaAws, FaDocker } from 'react-icons/fa';
-import { SiHuggingface, SiMysql, SiSqlite, SiC, SiArduino, SiCmake, SiJupyter, SiPytorch, SiTensorflow, SiNumpy, SiPandas, SiScikitlearn, SiNvidia, SiLinux, SiRaspberrypi } from 'react-icons/si';
-import { MdComputer, MdMemory, MdSpeed } from 'react-icons/md';
+import { FaPython, FaJava, FaGitAlt, FaBrain, FaTerminal, FaAws, FaDocker } from 'react-icons/fa';
+import { SiHuggingface, SiC, SiCmake, SiPytorch, SiTensorflow, SiNumpy, SiNvidia, SiLinux } from 'react-icons/si';
+import { MdMemory, MdSpeed } from 'react-icons/md';
 import './Skills.css';
 
 function Skills() {
@@ -13,7 +13,6 @@ function Skills() {
         { icon: SiC, label: 'C / C++' },
         { icon: FaPython, label: 'Python' },
         { icon: FaJava, label: 'Java' },
-        { icon: FaCalculator, label: 'MATLAB' },
         { icon: FaTerminal, label: 'Bash' },
       ],
     },
@@ -24,8 +23,7 @@ function Skills() {
         { icon: SiNvidia, label: 'CUDA' },
         { icon: MdMemory, label: 'OpenMP' },
         { icon: MdSpeed, label: 'MPI' },
-        { icon: MdSpeed, label: 'SIMD' },
-        { icon: FaTerminal, label: 'Slurm / PBS' },
+        { icon: FaTerminal, label: 'Slurm' },
         { icon: SiLinux, label: 'Linux' },
       ],
     },
@@ -38,27 +36,17 @@ function Skills() {
         { icon: FaBrain, label: 'Triton' },
         { icon: SiHuggingface, label: 'Hugging Face' },
         { icon: SiNumpy, label: 'NumPy' },
-        { icon: SiPandas, label: 'Pandas' },
-        { icon: SiScikitlearn, label: 'Scikit-learn' },
       ],
     },
     {
       id: 'tools',
-      title: 'Tools & Hardware',
+      title: 'Tools',
       skills: [
         { icon: FaGitAlt, label: 'Git' },
         { icon: SiCmake, label: 'CMake' },
         { icon: FaDocker, label: 'Docker' },
         { icon: FaAws, label: 'AWS' },
         { icon: FaTerminal, label: 'GDB' },
-        { icon: FaTerminal, label: 'Valgrind' },
-        { icon: SiJupyter, label: 'Jupyter' },
-        { icon: SiSqlite, label: 'SQLite' },
-        { icon: SiMysql, label: 'MySQL' },
-        { icon: SiArduino, label: 'Arduino' },
-        { icon: MdComputer, label: 'Jetson Nano' },
-        { icon: SiRaspberrypi, label: 'Raspberry Pi' },
-        { icon: MdComputer, label: 'Solidworks' },
       ],
     },
   ];

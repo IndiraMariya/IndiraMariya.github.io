@@ -2,63 +2,74 @@
 
 .about-section,
 .education-section,
+.experience-section,
 .skills-section,
 .projects-section,
 .contact-section,
 .ascii-converter-section {
-  margin: clamp(48px, 8vh, 88px) auto;
+  margin: clamp(40px, 6vh, 72px) auto;
   padding: 0 clamp(16px, 3vw, 24px);
   width: 100%;
-  max-width: 1080px;
+  max-width: 1000px;
   box-sizing: border-box;
 }
 
-/* Section titles — mono accent with // prefix */
+/* Center the titles (they're now inline-block, so center via the block) */
 .about-title,
 .education-title,
+.experience-title,
 .skills-title,
 .projects-title,
 .contact-title,
 .ascii-converter-title {
+  position: relative;
   font-family: var(--font-mono);
-  font-size: clamp(18px, 2.4vw, 24px);
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--text-color);
-  margin: 0 0 clamp(24px, 3.5vh, 40px);
-  display: block;
+  margin: 0 auto clamp(24px, 3.5vh, 40px);
+  display: table;          /* shrinks to text width, still block-centered via margin auto */
+  text-transform: lowercase;
+  isolation: isolate;
 }
 
+/* Oval glow scales with the title's own text width */
 .about-title::before,
 .education-title::before,
+.experience-title::before,
 .skills-title::before,
 .projects-title::before,
 .contact-title::before,
 .ascii-converter-title::before {
-  content: '// ';
-  color: var(--contrast);
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + clamp(40px, 6vw, 80px));   /* text width + overflow on each side */
+  height: clamp(70px, 9vw, 110px);
+  background: radial-gradient(
+    ellipse 60% 55% at 50% 50%,
+    var(--gradient-secondary),
+    transparent 80%
+  );
+  opacity: 0.55;
+  pointer-events: none;
 }
 
-/* One quiet card style */
+/* Flat cards — no box, hairline separation only */
 .education-card,
+.experience-card,
 .skill-category,
 .project-card,
 .contact-item {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 14px;
-  padding: clamp(20px, 2.6vw, 28px);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: clamp(16px, 2.2vw, 22px) 0;
   box-sizing: border-box;
-}
-
-.education-card:hover,
-.skill-category:hover,
-.project-card:hover,
-.contact-item:hover {
-  transform: translateY(-3px);
-  border-color: var(--contrast);
-  box-shadow: 0 10px 28px var(--shadow);
 }
 
 /* Category / label — small mono caps */
@@ -72,25 +83,19 @@
   text-transform: uppercase;
 }
 
-/* Pills / tags — mono, subtle */
+/* Pills / tags — flat, no fill */
 .skill-pill,
 .tech-tag {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 12px;
-  background-color: var(--tag-bg);
+  padding: 4px 0;
+  background-color: transparent;
   border: none;
-  border-radius: 8px;
+  border-radius: 0;
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 500;
-  color: var(--tag-text);
+  color: var(--text-muted);
   white-space: nowrap;
-  transition: transform 0.15s ease;
-}
-
-.skill-pill:hover,
-.tech-tag:hover {
-  transform: translateY(-1px);
 }

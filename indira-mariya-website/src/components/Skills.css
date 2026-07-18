@@ -3,18 +3,20 @@
 .skills-rows {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--card-border);
-  border-radius: 14px;
-  overflow: hidden;
-  background-color: var(--card-bg);
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  background-color: transparent;
+  max-width: 620px;
+  margin: 0 auto;
 }
 
 .skill-row {
   display: grid;
-  grid-template-columns: clamp(130px, 16vw, 180px) 1fr;
-  gap: clamp(16px, 2.5vw, 32px);
+  grid-template-columns: clamp(120px, 15vw, 160px) 1fr;
+  gap: clamp(12px, 2vw, 24px);
   align-items: center;
-  padding: clamp(16px, 2vw, 22px) clamp(18px, 2.2vw, 26px);
+  padding: clamp(12px, 1.6vw, 16px) 0;
 }
 
 .skill-row:not(:last-child) {
@@ -37,15 +39,12 @@
   font-size: 11px;
   font-weight: 500;
   color: var(--text-muted);
-  background-color: var(--tag-bg);
-  border-radius: 6px;
-  padding: 2px 7px;
 }
 
 .skills-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 8px 16px;
 }
 
 .pill-icon {

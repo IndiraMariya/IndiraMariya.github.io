@@ -9,9 +9,9 @@ function About() {
       <div className="about-content">
         <div className="about-text">
           <p>
-            I am currently a 3rd year Computer Science and Applied Math student at the
-            University of California, Santa Cruz. My areas of interest include GPU
-            Programming, High Performance Computing, and Computational Graphics.
+            3rd-year CS &amp; Applied Math student at UC Santa Cruz.
+            I work on GPU programming, high-performance computing, and
+            computational graphics.
           </p>
         </div>
       </div>

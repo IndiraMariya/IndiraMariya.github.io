@@ -1,37 +1,34 @@
-// import React from 'react';
 import './Education.css';
 
 function Education() {
   const educationData = [
     {
-      school: 'University of California, Santa Cruz',
-      degree: 'Bachelor of Science (B.S.) in Computer Science and Applied Mathematics',
-      period: 'Sept 2024 - Jun 2028',
+      school: 'UC Santa Cruz',
+      degree: 'B.S. Computer Science & Applied Mathematics',
+      period: 'Sept 2024 – Jun 2028',
       gpa: '3.95 GPA',
-      coursesLabel: 'Relevant Courses',
+      coursesLabel: 'Key coursework',
       courses: [
         'GPU Programming',
-        'Computational Methods',
         'Computer Architecture',
-        'Computer Systems Design',
-        'C Programming',
-        'Advanced Math Methods',
         'Analysis of Algorithms',
         'Data Structures',
-        'Functional Programming',
+        'Advanced Math Methods',
+        '...'
       ]
     },
     {
-      school: 'Foothill Community College, Los Altos',
-      degree: 'Certificate of Achievement in Software Development in Java',
-      period: 'Jun 2021 - Aug 2024',
-      coursesLabel: 'Relevant Courses',
+      school: 'Foothill College',
+      degree: 'Certificate — Software Development in Java',
+      period: 'Jun 2021 – Aug 2024',
+      gpa: 'Dual Enrollment',
+      coursesLabel: 'Key coursework',
       courses: [
-        'Introduction to Cloud Computing in AWS',
-        'Linux & Bash Scripting',
+        'Cloud Computing (AWS)',
+        'Linux & Bash',
         'Linear Algebra',
         'Discrete Mathematics',
-        'Intermediate Software Design in Java',
+        '...'
       ]
     }
   ];
@@ -39,7 +36,7 @@ function Education() {
   return (
     <section id="education" className="education-section">
       <h2 className="education-title">education</h2>
-      
+
       <div className="education-list">
         {educationData.map((edu, index) => (
           <article key={index} className="education-card">
@@ -52,7 +49,7 @@ function Education() {
 
             <div className="education-body">
               <p className="degree">{edu.degree}</p>
-              
+
               {edu.gpa && (
                 <p className="gpa-info">{edu.gpa}</p>
               )}

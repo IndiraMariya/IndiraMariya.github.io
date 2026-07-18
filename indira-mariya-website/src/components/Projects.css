@@ -1,22 +1,36 @@
-/* Projects.css — layout only */
+ /* Projects.css — layout only */
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(16px, 2vw, 24px);
   width: 100%;
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
   min-height: 100%;
+  text-align: center;
+  align-items: center;
+  padding: clamp(20px, 3vw, 32px);
+}
+
+/* Interior cross only — no outer border */
+.project-card:nth-child(1) {
+  border-right: 1px solid var(--divider);
+  border-bottom: 1px solid var(--divider);
+}
+.project-card:nth-child(2) {
+  border-bottom: 1px solid var(--divider);
+}
+.project-card:nth-child(3) {
+  border-right: 1px solid var(--divider);
 }
 
 .project-title {
   font-family: var(--font-mono);
-  font-size: clamp(16px, 1.8vw, 19px);
+  font-size: clamp(15px, 1.6vw, 17px);
   font-weight: 500;
   color: var(--text-color);
   margin: 0;
@@ -25,9 +39,9 @@
 
 .project-description {
   font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: 14px;
   color: var(--text-muted);
-  line-height: 1.65;
+  line-height: 1.55;
   margin: 0;
   flex: 1;
 }
@@ -35,14 +49,16 @@
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px 14px;
   margin: 0;
+  justify-content: center;
 }
 
 .project-links {
   display: flex;
   align-items: center;
-  gap: 18px;
+  justify-content: center;
+  gap: 16px;
   margin-top: auto;
   padding-top: 6px;
 }
@@ -68,6 +84,13 @@
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+  }
+  /* On mobile: single column, hairlines between rows only */
+  .project-card {
+    border-right: none !important;
+    border-bottom: 1px solid var(--divider);
+  }
+  .project-card:last-child {
+    border-bottom: none;
   }
 }

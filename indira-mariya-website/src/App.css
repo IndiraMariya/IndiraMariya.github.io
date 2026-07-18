@@ -4,7 +4,7 @@
 }
 
 html {
-  font-size: 100%;
+  font-size: 78%;
   scroll-behavior: smooth;
 }
 
@@ -52,113 +52,17 @@ body { margin: 0; padding: 0; overflow-x: hidden; }
   color: var(--text-color);
   min-height: 100vh;
   transition: background-color 0.3s ease, color 0.3s ease;
-  /* zoom: 0.90; */
 }
 
 a { color: var(--contrast); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 main {
-  padding: 0 clamp(20px, 5vw, 60px);
-  width: 100%;
-  max-width: 1080px;
-  margin: 0 auto;
-}
-
-html {
-  font-size: 81%;
-  scroll-behavior: smooth;
-}
-
-/* ===================================
-   THEME VARIABLES
-   =================================== */
-
-/* .light-mode {
-  --background-color: #ffffff;
-  --secondary: rgb(208, 215, 255);
-  --text-color: #1a1c64;
-  --ascii: darkblue;
-  --contrast: blue;
-  --divider: #3d3f7546;
-  --gradient-secondary: rgb(190, 190, 255);
-  --header-highlight: #3232a431;
-  --card-bg: rgba(245, 245, 255, 0.7);
-  --card-border: rgba(210, 210, 230, 0.6);
-  --tag-bg: rgba(230, 230, 250, 0.7);
-  --tag-text: #1a1a4d;
-  --shadow: rgba(26, 26, 77, 0.12);
-}
-
-.dark-mode {
-  --background-color: #0a0b29;
-  --secondary: rgb(37, 44, 87);
-  --text-color: #ffffff;
-  --ascii: white;
-  --contrast: rgb(168, 168, 255);
-  --divider: #7879a7b5;
-  --gradient-secondary: rgb(118, 118, 182);
-  --header-highlight: #bbbbd431;
-  --card-bg: rgba(25, 28, 60, 0.6);
-  --card-border: rgba(90, 92, 130, 0.4);
-  --tag-bg: rgba(45, 48, 90, 0.7);
-  --tag-text: #b9bcff;
-  --shadow: rgba(0, 0, 0, 0.4);
-} */
-
-/* ===================================
-   GLOBAL STYLES
-   =================================== */
-
-* {
-  box-sizing: border-box;
-}
-
-.App {
-  font-family: 'Roboto Mono', monospace;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  min-height: 100vh;
-}
-
-a {
-  color: var(--contrast);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ===================================
-   LAYOUT
-   =================================== */
-
-.container {
   padding: 0 clamp(20px, 5vw, 60px) 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: clamp(14px, 2vmin, 20px);
-  max-width: 1200px;
-  margin: 0 auto;
   width: 100%;
-}
-
-main {
-  padding: 0 clamp(20px, 5vw, 60px) 10px;
-  background: var(--background-color);
-  width: 100%;
-  max-width: 1200px;
+  max-width: 760px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
-
-/* ===================================
-   HEADER & NAVIGATION
-   =================================== */
 
 .App-header {
   background: radial-gradient(ellipse 80% 40% at 50% 50%, var(--gradient-secondary), var(--background-color));
@@ -172,91 +76,13 @@ main {
   padding: clamp(20px, 4vh, 40px) clamp(20px, 5vw, 60px);
 }
 
-header h1 {
-  display: inline;
-}
-
-.nav {
-  padding: 0;
-  padding-bottom: clamp(30px, 5vh, 50px);
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(24px, 4vw, 48px);
-  width: 100%;
-  order: -1;
-}
-
-.nav a {
-  text-decoration: none;
-  color: var(--text-color);
-  transition: all 0.2s ease;
-  font-size: clamp(14px, 1.5vw, 18px);
-}
-
-.nav a::after {
-  content: '•';
-  margin-left: 4px;
-  display: inline;
-}
-
 .name {
   text-align: center;
   font-size: clamp(24px, 4vw, 36px);
   margin: 0;
 }
 
-.nav a:hover {
-  font-weight: bold;
-  transform: translateY(-2px);
-}
-
-/* ===================================
-   DIVIDER
-   =================================== */
-
-.divider {
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-align: center;
-  margin: clamp(24px, 4vh, 32px) 0;
-}
-
-.divider .dash-line {
-  letter-spacing: 4px;
-  color: var(--divider);
-  font-family: monospace;
-  font-size: clamp(16px, 2vw, 20px);
-  font-weight: bold;
-}
-
-#divider {
-  height: 2px;
-  background-color: var(--divider);
-  border: none;
-  margin: clamp(24px, 4vh, 32px) 0;
-}
-
-/* ===================================
-   ASCII IMAGE
-   =================================== */
-
-#star_img {
-  position: absolute;
-  top: 50%;
-  right: -30px;
-  transform: translateY(-50%) rotate(-15deg);
-  width: clamp(30px, 4vw, 40px);
-  height: clamp(30px, 4vw, 40px);
-  z-index: 10;
-}
-
-.ascii-image-canvas {
-  display: none;
-}
+.ascii-image-canvas { display: none; }
 
 .ascii-image {
   font-family: monospace;
@@ -268,40 +94,6 @@ header h1 {
   white-space: pre;
   overflow: hidden;
 }
-
-/* ===================================
-   SECTION ROW LAYOUTS
-   =================================== */
-
-.section-row {
-  display: flex;
-  align-items: flex-start;
-  gap: clamp(24px, 4vw, 66px);
-  width: 100%;
-}
-
-.section-row-fill {
-  display: flex;
-  align-items: flex-start;
-  gap: clamp(12px, 2vw, 16px);
-  width: 100%;
-}
-
-.section-row-fill > .flex-fill {
-  flex: 1;
-  min-width: 0;
-}
-
-@media (max-width: 600px) {
-  .section-row,
-  .section-row-fill {
-    flex-direction: column;
-  }
-}
-
-/* ===================================
-   FOOTER
-   =================================== */
 
 footer {
   background-color: var(--text-color);
@@ -315,32 +107,8 @@ footer {
   font-size: clamp(11px, 1.3vw, 14px);
 }
 
-/* ===================================
-   UTILITY CLASSES
-   =================================== */
-
-#center {
-  text-align: center;
-}
-
-.App-link {
-  color: var(--contrast);
-}
-
-/* ===================================
-   RESPONSIVE DESIGN
-   =================================== */
-
 @media (max-width: 768px) {
-  .App-header {
-    min-height: 40vh;
-  }
-
-  .nav {
-    gap: clamp(16px, 3vw, 24px);
-    padding-bottom: clamp(20px, 3vh, 30px);
-  }
-
+  .App-header { min-height: 40vh; }
   main {
     padding-left: clamp(16px, 4vw, 20px);
     padding-right: clamp(16px, 4vw, 20px);
@@ -348,46 +116,12 @@ footer {
 }
 
 @media (max-width: 480px) {
-  html {
-    font-size: 85%;
-  }
-
+  html { font-size: 82%; }
   .App-header {
     min-height: 35vh;
     padding-left: 16px;
     padding-right: 16px;
   }
-
-  .name {
-    font-size: clamp(20px, 7vw, 32px);
-  }
-
-  .nav {
-    gap: clamp(12px, 3vw, 18px);
-    flex-wrap: wrap;
-  }
-
-  main {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-
-/* ===================================
-   ANIMATIONS
-   =================================== */
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  .name { font-size: clamp(20px, 7vw, 32px); }
+  main { padding-left: 16px; padding-right: 16px; }
 }

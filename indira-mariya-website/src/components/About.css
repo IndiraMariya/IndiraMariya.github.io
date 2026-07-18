@@ -2,15 +2,17 @@
 
 .about-content {
   display: flex;
+  justify-content: center;
   width: 100%;
 }
 
 .about-text p {
   font-family: var(--font-sans);
-  font-size: clamp(16px, 1.5vw, 19px);
+  font-size: clamp(15px, 1.4vw, 17px);
   color: var(--text-color);
-  line-height: 1.75;
-  margin: 0;
-  max-width: 720px;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 560px;
   font-weight: 400;
+  text-align: center;
 }

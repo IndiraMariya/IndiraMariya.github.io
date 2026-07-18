@@ -7,7 +7,7 @@ function Projects() {
     {
       id: 'omf',
       title: 'Project Terraforma',
-      description: 'Determine whether two Points of Interest (POI) refer to the same physical place using deterministic similarity scoring with SLM-based structured reasoning.',
+      description: 'Matches Points of Interest to the same real-world place using similarity scoring + SLM reasoning.',
       tags: ['Python', 'SLM', 'Data Conflation'],
       githubUrl: 'https://github.com/project-terraforma/indira-place-conflation',
       demoUrl: null,
@@ -15,7 +15,7 @@ function Projects() {
     {
       id: 'arduino-contest',
       title: 'IEEE Arduino Contest',
-      description: 'Arduino-based Tactile Music Visualizer: A real-time audio-to-vibration interface for accessibility. Uses fixed-point FFT to map frequency bins (bass, sub-bass, treble) to motor haptics, enabling a physical experience of sound.',
+      description: 'Tactile music visualizer that turns audio into haptic vibration via fixed-point FFT.',
       tags: ['Arduino', 'C', 'FFT', 'Haptics'],
       githubUrl: 'https://github.com/IndiraMariya/ArduinoContest',
       demoUrl: null,
@@ -23,7 +23,7 @@ function Projects() {
     {
       id: 'solar-flare',
       title: 'Solar Flare Prediction',
-      description: "Predict solar flares to provide early warnings, helping to protect Earth's electrical infrastructure. Utilizes PINNs trained on the F10.7 Index and satellite imagery from the Solar Dynamics Observatory.",
+      description: 'Early-warning model for solar flares using PINNs on F10.7 Index and SDO imagery.',
       tags: ['PyTorch', 'PINNs', 'Astrophysics'],
       githubUrl: 'https://github.com/IndiraMariya/ASI',
       demoUrl: null,
@@ -31,7 +31,7 @@ function Projects() {
     {
       id: 'double-scoop',
       title: 'The Double Scoop',
-      description: 'An app leveraging NLP techniques to detect media bias in news articles, presenting users with a diverse range of topics and perspectives for a more balanced view.',
+      description: 'NLP app that detects media bias and surfaces balanced perspectives on the news.',
       tags: ['NLP', 'ML', 'Web App'],
       githubUrl: 'https://github.com/The-Double-Scoop/the-double-scoop',
       demoUrl: null,

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
-const SYMBOLS = '#'.split('');
-const LOWERCASE = '&%'.split('');
+const SYMBOLS = '#+%'.split('');
+const LOWERCASE = '+=&%'.split('');
 
 function pickChar() {
   return Math.random() < 0.75
@@ -9,9 +9,9 @@ function pickChar() {
     : LOWERCASE[Math.floor(Math.random() * LOWERCASE.length)];
 }
 
-const COLORS = ['rgba(90, 110, 200, 0.33)'];
+const COLORS = ['rgba(90, 110, 200, 0.47)'];
 
-const AVOID_PAD = 10;
+const AVOID_PAD = 20;
 const RIPPLE_RADIUS = 140;
 const RIPPLE_STRENGTH = 7.0;
 

@@ -1,6 +1,6 @@
-/* Education.css — layout only */
+/* Experience.css — layout only */
 
-.education-list {
+.experience-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: clamp(24px, 4vw, 48px);
@@ -10,16 +10,16 @@
   text-align: left;
 }
 
-.education-header {
+.experience-header {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 12px;
-  padding-bottom: 12px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--divider);
 }
 
-.school-name {
+.role-name {
   font-family: var(--font-sans);
   font-size: clamp(16px, 1.8vw, 19px);
   font-weight: 600;
@@ -28,54 +28,34 @@
   line-height: 1.3;
 }
 
-.education-period {
+.org-name {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.experience-period {
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--text-muted);
   white-space: nowrap;
 }
 
-.education-body {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.degree {
-  font-family: var(--font-sans);
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--text-color);
-  margin: 0;
-  line-height: 1.45;
-}
-
-.gpa-info {
-  font-family: var(--font-mono);
-  font-size: 14px;
-  color: var(--contrast);
-  margin: 0;
-  font-weight: 500;
-}
-
-.courses-section {
-  margin-top: 8px;
-}
-
-.courses-list {
+.experience-description {
   font-family: var(--font-sans);
   font-size: 14px;
   color: var(--text-muted);
-  margin: 6px 0 0 0;
   line-height: 1.6;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
-  .education-list {
+  .experience-list {
     grid-template-columns: 1fr;
     gap: 0;
   }
-  .education-card:not(:last-child) {
+  .experience-card:not(:last-child) {
     border-bottom: 1px solid var(--divider);
   }
 }
