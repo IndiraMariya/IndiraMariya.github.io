@@ -1,0 +1,96 @@
+/* Shared section system — import once in App.js */
+
+.about-section,
+.education-section,
+.skills-section,
+.projects-section,
+.contact-section,
+.ascii-converter-section {
+  margin: clamp(48px, 8vh, 88px) auto;
+  padding: 0 clamp(16px, 3vw, 24px);
+  width: 100%;
+  max-width: 1080px;
+  box-sizing: border-box;
+}
+
+/* Section titles — mono accent with // prefix */
+.about-title,
+.education-title,
+.skills-title,
+.projects-title,
+.contact-title,
+.ascii-converter-title {
+  font-family: var(--font-mono);
+  font-size: clamp(18px, 2.4vw, 24px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text-color);
+  margin: 0 0 clamp(24px, 3.5vh, 40px);
+  display: block;
+}
+
+.about-title::before,
+.education-title::before,
+.skills-title::before,
+.projects-title::before,
+.contact-title::before,
+.ascii-converter-title::before {
+  content: '// ';
+  color: var(--contrast);
+}
+
+/* One quiet card style */
+.education-card,
+.skill-category,
+.project-card,
+.contact-item {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: clamp(20px, 2.6vw, 28px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.education-card:hover,
+.skill-category:hover,
+.project-card:hover,
+.contact-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--contrast);
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+/* Category / label — small mono caps */
+.category-title,
+.courses-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Pills / tags — mono, subtle */
+.skill-pill,
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background-color: var(--tag-bg);
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--tag-text);
+  white-space: nowrap;
+  transition: transform 0.15s ease;
+}
+
+.skill-pill:hover,
+.tech-tag:hover {
+  transform: translateY(-1px);
+}

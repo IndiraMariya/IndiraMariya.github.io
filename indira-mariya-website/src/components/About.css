@@ -1,111 +1,16 @@
-/* About.css */
+/* About.css — layout only */
 
-.about-section {
-  margin: 5vh 0;
-  padding: 0 2vw;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.about-title {
-  font-size: clamp(28px, 5vw, 42px);
-  font-weight: 700;
-  color: #1a1a4d;
-  margin-bottom: clamp(24px, 3vh, 40px);
-  font-family: 'Courier New', Courier, monospace;
-}
-
-/* About Content Layout */
 .about-content {
   display: flex;
-  align-items: flex-start;
-  gap: clamp(40px, 5vw, 80px);
   width: 100%;
-}
-
-/* ASCII Image Container */
-.about-ascii {
-  flex-shrink: 0;
-  width: clamp(200px, 20vw, 300px);
-}
-
-.about-ascii .ascii-image-canvas {
-  display: none;
-}
-
-.about-ascii .ascii-image {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: clamp(4px, 0.5vw, 6px);
-  line-height: 1;
-  color: #1a1a4d;
-  white-space: pre;
-  letter-spacing: 0;
-  overflow: hidden;
-  display: block;
-}
-
-/* About Text */
-.about-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .about-text p {
-  font-size: clamp(16px, 1.8vw, 20px);
-  color: #1a1a4d;
-  line-height: 1.8;
+  font-family: var(--font-sans);
+  font-size: clamp(16px, 1.5vw, 19px);
+  color: var(--text-color);
+  line-height: 1.75;
   margin: 0;
-  font-family: 'Courier New', Courier, monospace;
+  max-width: 720px;
   font-weight: 400;
-  max-width: 900px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about-section {
-    padding: 0 4vw;
-  }
-
-  .about-content {
-    flex-direction: column;
-    gap: clamp(24px, 3vh, 32px);
-  }
-
-  .about-ascii {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .about-text p {
-    font-size: clamp(15px, 4vw, 18px);
-  }
-}
-
-@media (max-width: 480px) {
-  .about-section {
-    padding: 0 5vw;
-  }
-
-  .about-ascii {
-    max-width: 250px;
-  }
-
-  .about-text p {
-    font-size: clamp(14px, 4.5vw, 17px);
-    line-height: 1.7;
-  }
-}
-
-/* Print Styles */
-@media print {
-  .about-ascii {
-    display: none;
-  }
-
-  .about-content {
-    flex-direction: column;
-  }
 }

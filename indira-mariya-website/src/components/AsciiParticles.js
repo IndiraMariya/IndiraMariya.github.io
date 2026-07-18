@@ -11,7 +11,7 @@ function pickChar() {
 
 const COLORS = ['rgba(90, 110, 200, 0.33)'];
 
-const AVOID_PAD = 90;
+const AVOID_PAD = 10;
 const RIPPLE_RADIUS = 140;
 const RIPPLE_STRENGTH = 7.0;
 
@@ -79,13 +79,17 @@ function AsciiParticles({ nameRef }) {
       if (!nameRef?.current) return null;
       const nr = nameRef.current.getBoundingClientRect();
       const pr = parent.getBoundingClientRect();
+      // scale DOM coords into canvas pixel space (handles zoom / font reflow)
+      const scaleX = canvas.width / pr.width;
+      const scaleY = canvas.height / pr.height;
       return {
-        x: nr.left - pr.left - AVOID_PAD,
-        y: nr.top - pr.top - AVOID_PAD,
-        w: nr.width + AVOID_PAD * 2,
-        h: nr.height + AVOID_PAD * 2,
+        x: (nr.left - pr.left) * scaleX - AVOID_PAD,
+        y: (nr.top - pr.top) * scaleY - AVOID_PAD,
+        w: nr.width * scaleX + AVOID_PAD * 2,
+        h: nr.height * scaleY + AVOID_PAD * 2,
       };
     }
+
 
     function resize() {
       state.W = parent.offsetWidth;
@@ -100,7 +104,9 @@ function AsciiParticles({ nameRef }) {
     }
 
     function tick() {
-      const { W, H, particles, mouse, nameBox } = state;
+      const { W, H, particles, mouse } = state;
+      state.nameBox = measureName();
+      const nameBox = state.nameBox;
       ctx.clearRect(0, 0, W, H);
 
       for (const p of particles) {
@@ -158,6 +164,23 @@ function AsciiParticles({ nameRef }) {
       state.raf = requestAnimationFrame(tick);
     }
 
+    function onClick(e) {
+      const r = parent.getBoundingClientRect();
+      const cx = e.clientX - r.left;
+      const cy = e.clientY - r.top;
+      for (const p of state.particles) {
+        const dx = p.x - cx;
+        const dy = p.y - cy;
+        const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+        if (dist < 260) {
+          const force = (1 - dist / 260) * 22;
+          p.rippleVx += (dx / dist) * force;
+          p.rippleVy += (dy / dist) * force;
+        }
+      }
+    }
+
+
     function onMouseMove(e) {
       const r = parent.getBoundingClientRect();
       state.mouse.x = e.clientX - r.left;
@@ -176,12 +199,14 @@ function AsciiParticles({ nameRef }) {
 
     parent.addEventListener('mousemove', onMouseMove);
     parent.addEventListener('mouseleave', onMouseLeave);
+    parent.addEventListener('click', onClick);
 
     return () => {
       cancelAnimationFrame(state.raf);
       ro.disconnect();
       parent.removeEventListener('mousemove', onMouseMove);
       parent.removeEventListener('mouseleave', onMouseLeave);
+      parent.removeEventListener('click', onClick);
     };
   }, [nameRef]);
 

@@ -5,7 +5,7 @@ function Education() {
   const educationData = [
     {
       school: 'University of California, Santa Cruz',
-      degree: 'Bachelor of Science (B.S.) in Computer Science and Applied Math',
+      degree: 'Bachelor of Science (B.S.) in Computer Science and Applied Mathematics',
       period: 'Sept 2024 - Jun 2028',
       gpa: '3.95 GPA',
       coursesLabel: 'Relevant Courses',

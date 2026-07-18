@@ -1,114 +1,80 @@
-// import React from 'react';
-// import './Projects.css';
-
-// function Projects() {
-//   const projects = [
-//     {
-//       id: 'solar-flare',
-//       title: 'Solar Flare Prediction',
-//       description: "Predict solar flares to provide early warnings, helping to protect Earth's electrical infrastructure."
-//     },
-//     {
-//       id: 'double-scoop',
-//       title: 'The Double Scoop',
-//       description: 'An app made with machine learning to detects media bias, present a diverse range of American news articles to users.'
-//     },
-//     {
-//       id: 'lox-focus',
-//       title: 'LOX Focus Device',
-//       description: 'A smart lockbox designed to help you beat distractions by physically locking away your phone for a set period, so you can stay focused and productive without temptation.'
-//     },    
-//     {
-//       id: 'arduino-contest',
-//       title: 'IEE Arduino Contest',
-//       description: 'Arduino-based Tactile Music Visualizer A real-time audio-to-vibration interface designed for accessibility. Featuring a fixed-point FFT implementation to maximize performance on low-RAM devices, this tool maps frequency bins (bass, sub-bass, treble) to motor haptics, enabling a physical experience of sound through integer-based signal processing.'
-//     }
-//   ];
-
-//   return (
-//     <section id="projects" className="projects-section">
-//       <h2 className="projects-title">recent projects</h2>
-      
-//       <div className="projects-grid">
-//         {projects.map((project) => (
-//           <article key={project.id} className="project-card">
-//             <h3 className="project-title">{project.title}</h3>
-//             <p className="project-description">{project.description}</p>
-//           </article>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default Projects;
-
 import React from 'react';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import './Projects.css';
 
 function Projects() {
-  
   const projects = [
     {
       id: 'omf',
       title: 'Project Terraforma',
       description: 'Determine whether two Points of Interest (POI) refer to the same physical place using deterministic similarity scoring with SLM-based structured reasoning.',
-      githubUrl: 'https://github.com/project-terraforma/indira-place-conflation'
-    },    
+      tags: ['Python', 'SLM', 'Data Conflation'],
+      githubUrl: 'https://github.com/project-terraforma/indira-place-conflation',
+      demoUrl: null,
+    },
     {
       id: 'arduino-contest',
       title: 'IEEE Arduino Contest',
       description: 'Arduino-based Tactile Music Visualizer: A real-time audio-to-vibration interface for accessibility. Uses fixed-point FFT to map frequency bins (bass, sub-bass, treble) to motor haptics, enabling a physical experience of sound.',
-      githubUrl: 'https://github.com/IndiraMariya/ArduinoContest'
+      tags: ['Arduino', 'C', 'FFT', 'Haptics'],
+      githubUrl: 'https://github.com/IndiraMariya/ArduinoContest',
+      demoUrl: null,
     },
     {
       id: 'solar-flare',
       title: 'Solar Flare Prediction',
-      description: "Predict solar flares to provide early warnings, helping to protect Earth's electrical infrastructure. Utilizes PINNs trained on F10.7 Index and satellite imagery from the Solar Dynamics Observatory.",
-      githubUrl: 'https://github.com/IndiraMariya/ASI'
+      description: "Predict solar flares to provide early warnings, helping to protect Earth's electrical infrastructure. Utilizes PINNs trained on the F10.7 Index and satellite imagery from the Solar Dynamics Observatory.",
+      tags: ['PyTorch', 'PINNs', 'Astrophysics'],
+      githubUrl: 'https://github.com/IndiraMariya/ASI',
+      demoUrl: null,
     },
     {
       id: 'double-scoop',
       title: 'The Double Scoop',
-      description: 'An app leveraging NLP techniques to detect media bias in news articles, presenting users with a diverse range of topics and perspectives for a more balanced view',
-      githubUrl: 'https://github.com/The-Double-Scoop/the-double-scoop'
+      description: 'An app leveraging NLP techniques to detect media bias in news articles, presenting users with a diverse range of topics and perspectives for a more balanced view.',
+      tags: ['NLP', 'ML', 'Web App'],
+      githubUrl: 'https://github.com/The-Double-Scoop/the-double-scoop',
+      demoUrl: null,
     },
   ];
-
-  const handleCardClick = (url) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
 
   return (
     <section id="projects" className="projects-section">
       <h2 className="projects-title">recent projects</h2>
-      
+
       <div className="projects-grid">
         {projects.map((project) => (
-          <article 
-            key={project.id} 
-            className="project-card"
-            onClick={() => handleCardClick(project.githubUrl)}
-            style={{ cursor: 'pointer' }}
-          >
+          <article key={project.id} className="project-card">
             <h3 className="project-title">{project.title}</h3>
             <p className="project-description">{project.description}</p>
-            
-            <div className="learn-more">
-              <span>Learn more</span>
-              <svg 
-                width="20" 
-                height="20" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
+
+            {project.tags && project.tags.length > 0 && (
+              <div className="tech-tags">
+                {project.tags.map((tag) => (
+                  <span key={tag} className="tech-tag">{tag}</span>
+                ))}
+              </div>
+            )}
+
+            <div className="project-links">
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${project.title} source on GitHub`}
               >
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
+                <FaGithub aria-hidden="true" /> Code
+              </a>
+              {project.demoUrl && (
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View ${project.title} live demo`}
+                >
+                  <FaExternalLinkAlt aria-hidden="true" /> Live demo
+                </a>
+              )}
             </div>
           </article>
         ))}

@@ -66,10 +66,14 @@ function Skills() {
   return (
     <section id="skills" className="skills-section">
       <h2 className="skills-title">technical skills</h2>
-      <div className="skills-grid">
+
+      <div className="skills-rows">
         {skillSections.map((section) => (
-          <article key={section.id} className="skill-category">
-            <h3 className="category-title">{section.title}</h3>
+          <div key={section.id} className="skill-row">
+            <div className="skill-row-label">
+              <span className="category-title">{section.title}</span>
+              <span className="skill-count">{section.skills.length}</span>
+            </div>
             <div className="skills-pills">
               {section.skills.map((skill) => {
                 const IconComponent = skill.icon;
@@ -81,7 +85,7 @@ function Skills() {
                 );
               })}
             </div>
-          </article>
+          </div>
         ))}
       </div>
     </section>

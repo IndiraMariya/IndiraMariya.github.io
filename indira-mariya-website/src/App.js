@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import './components/sections.css';
 import AsciiImage from './components/ascii_image.js';
 import star from './images/star.png';
 import book from './images/book.png';
