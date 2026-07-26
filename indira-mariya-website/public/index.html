@@ -9,7 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- Favicons — the sized PNG is what Google reads for the search icon -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="512x512" href="%PUBLIC_URL%/favicon-512.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/logo192.png" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
@@ -22,16 +25,18 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Indira Mariya" />
     <meta property="og:url" content="https://indiramariya.github.io/" />
     <meta property="og:title" content="Indira Mariya" />
     <meta property="og:description" content="CS & Applied Math @ UC Santa Cruz — GPU programming, HPC, and computational graphics." />
-    <meta property="og:image" content="https://indiramariya.github.io/logo192.png" />
+    <meta property="og:image" content="https://indiramariya.github.io/logo512.png" />
+    <meta property="og:image:alt" content="Indira Mariya" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Indira Mariya" />
     <meta name="twitter:description" content="CS & Applied Math @ UC Santa Cruz — GPU programming, HPC, and computational graphics." />
-    <meta name="twitter:image" content="https://indiramariya.github.io/logo192.png" />
+    <meta name="twitter:image" content="https://indiramariya.github.io/logo512.png" />
 
     <!-- Structured data: tells Google this page IS the person "Indira Mariya" -->
     <script type="application/ld+json">

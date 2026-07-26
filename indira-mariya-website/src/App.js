@@ -23,7 +23,7 @@ function App() {
 
       <main>
         <section id="home"></section>
-        <About />
+        {/* <About /> */}
         <Education />
         <Experience />
         <Skills />
